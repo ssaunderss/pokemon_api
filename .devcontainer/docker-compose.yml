@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  pokemon_api_dev:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      MIX_ENV: dev
+    volumes:
+      - ../:/workspace/pokemon_api
+    command: bash -c "sleep infinity"
+  postgres_db:
+    environment: 
+      PGDATA: /var/lib/postgresql/data/pgdata 
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres 
+      POSTGRES_HOST_AUTH_METHOD: trust
+    image: postgres:14-alpine
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: 

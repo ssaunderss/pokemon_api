@@ -1,0 +1,13 @@
+{
+    "name": "pokemon-api-devcontainer",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "workspaceFolder": "/workspace/pokemon_api",
+    "service": "pokemon_api_dev",
+    "extensions": [
+      "jakebecker.elixir-ls",
+      "eamodio.gitlens",
+      "streetsidesoftware.code-spell-checker"
+    ],
+    "onCreateCommand": "elixir --version",
+    "forwardPorts": [4000]
+  }
