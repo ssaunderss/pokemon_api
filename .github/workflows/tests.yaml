@@ -6,12 +6,12 @@ on:
   pull_request:
     branches: [ master ]
   
-  jobs:
-    test-pokemon-api:
-      runs-on: ubuntu
-    
-    container:
-      image: elixir:1.13.2-slim
+jobs:
+  test-pokemon-api:
+    runs-on: ubuntu
+  
+  container:
+    image: elixir:1.13.2-slim
     
   steps:
     - name: Checkout code
