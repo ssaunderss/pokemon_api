@@ -9,3 +9,4 @@ mix deps.get
 
 # ecto
 mix ecto.create
+mix ecto.migrate

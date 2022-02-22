@@ -9,5 +9,7 @@
       "streetsidesoftware.code-spell-checker"
     ],
     "onCreateCommand": "elixir --version",
-    "forwardPorts": [4000]
+    "postCreateCommand": "./.devcontainer/setup.sh",
+    "forwardPorts": [4000],
+    "shutdownAction": "stopCompose"
   }

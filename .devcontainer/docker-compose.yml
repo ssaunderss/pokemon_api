@@ -20,5 +20,9 @@ services:
     restart: always
     volumes:
       - pgdata:/var/lib/postgresql/data
+    expose:
+      - 9876
+    ports:
+      - 9876:5432
 volumes:
-  pgdata: 
+  pgdata:
