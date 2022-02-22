@@ -8,7 +8,7 @@ on:
   
 jobs:
   test-pokemon-api:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
   
     container:
       image: elixir:1.13.2-slim
